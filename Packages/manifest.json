@@ -1,5 +1,8 @@
 {
   "dependencies": {
+    "com.cysharp.unitask": "https://github.com/Cysharp/UniTask.git?path=src/UniTask/Assets/Plugins/UniTask",
+    "com.neuecc.unirx": "https://github.com/neuecc/UniRx.git?path=Assets/Plugins/UniRx/Scripts",
+    "com.svermeulen.extenject": "https://github.com/svermeulen/Extenject.git?path=/UnityProject/Assets/Plugins/Zenject",
     "com.unity.2d.animation": "4.2.4",
     "com.unity.2d.pixel-perfect": "3.0.2",
     "com.unity.2d.psdimporter": "3.1.4",
