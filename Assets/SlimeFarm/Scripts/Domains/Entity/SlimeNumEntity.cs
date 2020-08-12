@@ -12,15 +12,15 @@ namespace SlimeFarm.Scripts.Domains.Entity
 
     public interface ISlimeDecreasable
     {
-        void Decrease(BigInteger num);
+        bool Decrease(BigInteger num);
     }
 
-    public interface ISlimeNumChangeAsObservable
+    public interface ISlimeNum
     {
-        IObservable<short[]> SlimeNumAsObservable();
+        IObservable<short[]> OnChangeAsObservable();
     }
 
-    public class SlimeNumEntity : ISlimeIncreasable, ISlimeDecreasable, ISlimeNumChangeAsObservable, IDisposable
+    public class SlimeNumEntity : ISlimeIncreasable, ISlimeDecreasable, ISlimeNum, IDisposable
     {
         private BigInteger _slimeNum = default;
         private readonly short[] _splitNum = default;
@@ -35,10 +35,11 @@ namespace SlimeFarm.Scripts.Domains.Entity
         public SlimeNumEntity()
         {
             _slimeNum = new BigInteger();
+            _splitNum = new short[17];
             _reactiveSplitNum = new ReactiveProperty<short[]>(new short[17]);
         }
 
-        IObservable<short[]> ISlimeNumChangeAsObservable.SlimeNumAsObservable()
+        IObservable<short[]> ISlimeNum.OnChangeAsObservable()
         {
             return _reactiveSplitNum;
         }
@@ -49,10 +50,13 @@ namespace SlimeFarm.Scripts.Domains.Entity
             SplitNumber();
         }
 
-        void ISlimeDecreasable.Decrease(BigInteger num)
+        bool ISlimeDecreasable.Decrease(BigInteger num)
         {
+            if (_slimeNum < num) return false;
+
             _slimeNum -= num;
             SplitNumber();
+            return true;
         }
 
         private void SplitNumber()
