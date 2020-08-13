@@ -18,7 +18,7 @@ namespace SlimeFarm.Scripts.Presentation.View
             "載", "極 ", "恒河沙", "阿僧祇", "那由他", "不可思議", "無量大数"
         };
 
-        public void Count(IEnumerable<short> splitNum)
+        void INumberOutPutPort.Count(IEnumerable<short> splitNum)
         {
             var builder = new StringBuilder();
             var viewCount = 0;
@@ -31,6 +31,7 @@ namespace SlimeFarm.Scripts.Presentation.View
                 if (viewCount == 2) break;
             }
 
+            if (viewCount == 0) builder.Append(0);
             builder.Append(_unit);
 
             _text.text = builder.ToString();
