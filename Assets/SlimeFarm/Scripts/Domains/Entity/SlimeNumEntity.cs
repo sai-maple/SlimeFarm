@@ -26,12 +26,6 @@ namespace SlimeFarm.Scripts.Domains.Entity
         private readonly short[] _splitNum = default;
         private readonly ReactiveProperty<short[]> _reactiveSplitNum = default;
 
-        private static readonly string[] Units =
-        {
-            "万", "億", "兆", "京", "垓", "秭", "穣", "溝", "澗", "正",
-            "載", "極 ", "恒河沙", "阿僧祇", "那由他", "不可思議", "無量大数"
-        };
-
         public SlimeNumEntity()
         {
             _slimeNum = new BigInteger();
