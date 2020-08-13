@@ -1,3 +1,4 @@
+using SlimeFarm.Scripts.Data.Repository;
 using SlimeFarm.Scripts.Domains.Entity;
 using SlimeFarm.Scripts.Domains.UseCase;
 using Zenject;
@@ -12,7 +13,7 @@ namespace SlimeFarm.Scripts.Application.Installer
 
             Container.BindInterfacesTo<DayTimeEntity>()
                 .AsSingle();
-            Container.BindInterfacesTo<FarmLevelEntity>()
+            Container.BindInterfacesTo<FarmInfoEntity>()
                 .AsSingle();
             Container.BindInterfacesTo<ItemEntity>()
                 .AsSingle();
@@ -28,6 +29,9 @@ namespace SlimeFarm.Scripts.Application.Installer
             Container.BindInterfacesTo<LevelUpFarmUseCase>()
                 .AsSingle();
             Container.BindInterfacesTo<ShipUseCaseUseCase>()
+                .AsSingle();
+            
+            Container.BindInterfacesTo<FarmLevelRepository>()
                 .AsSingle();
         }
     }

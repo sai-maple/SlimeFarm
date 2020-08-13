@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Numerics;
 using UniRx;
-using Unity.Mathematics;
 
 namespace SlimeFarm.Scripts.Domains.Entity
 {
@@ -17,57 +16,38 @@ namespace SlimeFarm.Scripts.Domains.Entity
 
     public interface ISlimeNum
     {
-        IObservable<short[]> OnChangeAsObservable();
+        IObservable<BigInteger> OnChangeAsObservable();
     }
 
     public class SlimeNumEntity : ISlimeIncreasable, ISlimeDecreasable, ISlimeNum, IDisposable
     {
-        private BigInteger _slimeNum = default;
         private readonly short[] _splitNum = default;
-        private readonly ReactiveProperty<short[]> _reactiveSplitNum = default;
+        private readonly ReactiveProperty<BigInteger> _reactiveSplitNum = default;
 
         public SlimeNumEntity()
         {
-            _slimeNum = new BigInteger();
             _splitNum = new short[17];
-            _reactiveSplitNum = new ReactiveProperty<short[]>(new short[17]);
+            _reactiveSplitNum = new ReactiveProperty<BigInteger>();
         }
 
-        IObservable<short[]> ISlimeNum.OnChangeAsObservable()
+        IObservable<BigInteger> ISlimeNum.OnChangeAsObservable()
         {
             return _reactiveSplitNum;
         }
 
         void ISlimeIncreasable.Increase(BigInteger num)
         {
-            _slimeNum += num;
-            SplitNumber();
+            _reactiveSplitNum.Value += num;
         }
 
         bool ISlimeDecreasable.Decrease(BigInteger num)
         {
-            if (_slimeNum < num) return false;
+            if (_reactiveSplitNum.Value < num) return false;
 
-            _slimeNum -= num;
-            SplitNumber();
+            _reactiveSplitNum.Value -= num;
             return true;
         }
 
-        private void SplitNumber()
-        {
-            var num = _slimeNum;
-            var splitUnit = (BigInteger) math.pow(10, 4);
-            var digit = 0;
-
-            for (; num > 0; num /= splitUnit)
-            {
-                var x = num % splitUnit;
-                _splitNum[digit] = (short) x;
-                digit++;
-            }
-
-            _reactiveSplitNum.Value = _splitNum;
-        }
 
         public void Dispose()
         {

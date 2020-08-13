@@ -1,9 +1,9 @@
-using System.Collections.Generic;
+using System.Numerics;
 
 namespace SlimeFarm.Scripts.Presentation.Presenter
 {
     public interface INumberOutPutPort
     {
-        void Count(IEnumerable<short> splitNum);
+        void Count(BigInteger number);
     }
 }

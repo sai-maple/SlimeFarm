@@ -1,3 +1,4 @@
+using SlimeFarm.Scripts.Application.DTO;
 using SlimeFarm.Scripts.Domains.Entity;
 
 namespace SlimeFarm.Scripts.Domains.UseCase
@@ -7,25 +8,34 @@ namespace SlimeFarm.Scripts.Domains.UseCase
         bool LevelUp();
     }
 
+    public interface IFarmRepository
+    {
+        FarmInfo GetNextFarmInfo(FarmInfo currentInfo);
+    }
+
     public class LevelUpFarmUseCase : ILevelUpFarmUseCase
     {
         private readonly IMoneyDecreasable _moneyDecreasable = default;
         private readonly IFarmLevelUpdatable _farmLevelUpdatable = default;
-
-        // todo 牧場レベルアップのrepository
+        private readonly IFarmRepository _farmRepository = default;
+        private readonly IFarmInfo _farmInfo = default;
 
         public LevelUpFarmUseCase(
             IMoneyDecreasable moneyDecreasable,
-            IFarmLevelUpdatable farmLevelUpdatable)
+            IFarmLevelUpdatable farmLevelUpdatable,
+            IFarmRepository farmRepository,
+            IFarmInfo farmInfo)
         {
             _moneyDecreasable = moneyDecreasable;
             _farmLevelUpdatable = farmLevelUpdatable;
+            _farmRepository = farmRepository;
+            _farmInfo = farmInfo;
         }
 
         public bool LevelUp()
         {
-            if (_moneyDecreasable.Decrease(100)) return false;
-            _farmLevelUpdatable.LevelUp();
+            if (_moneyDecreasable.Decrease(_farmInfo.CurrentInfo.LevelUpCost)) return false;
+            _farmLevelUpdatable.LevelUp(_farmRepository.GetNextFarmInfo(_farmInfo.CurrentInfo));
             return true;
         }
     }

@@ -11,21 +11,22 @@ namespace SlimeFarm.Scripts.Domains.UseCase
     {
         private readonly IMoneyIncreasable _moneyIncreasable = default;
         private readonly ISlimeDecreasable _slimeDecreasable = default;
-
-        // todo 出荷データのrepository
+        private readonly IFarmInfo _farmInfo = default;
 
         public ShipUseCaseUseCase(
             IMoneyIncreasable moneyIncreasable,
-            ISlimeDecreasable slimeDecreasable)
+            ISlimeDecreasable slimeDecreasable,
+            IFarmInfo farmInfo)
         {
             _moneyIncreasable = moneyIncreasable;
             _slimeDecreasable = slimeDecreasable;
+            _farmInfo = farmInfo;
         }
 
         bool IShipUseCase.ShipSlime()
         {
-            if (!_slimeDecreasable.Decrease(100)) return false;
-            _moneyIncreasable.Increase(100);
+            if (!_slimeDecreasable.Decrease(_farmInfo.CurrentInfo.ShipSlime)) return false;
+            _moneyIncreasable.Increase(_farmInfo.CurrentInfo.ShipMoney);
             return true;
         }
     }
