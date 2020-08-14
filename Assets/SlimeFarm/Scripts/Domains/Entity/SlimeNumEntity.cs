@@ -16,19 +16,20 @@ namespace SlimeFarm.Scripts.Domains.Entity
 
     public interface ISlimeNum
     {
+        BigInteger Num { get; }
         IObservable<BigInteger> OnChangeAsObservable();
     }
 
     public class SlimeNumEntity : ISlimeIncreasable, ISlimeDecreasable, ISlimeNum, IDisposable
     {
-        private readonly short[] _splitNum = default;
         private readonly ReactiveProperty<BigInteger> _reactiveSplitNum = default;
 
         public SlimeNumEntity()
         {
-            _splitNum = new short[17];
-            _reactiveSplitNum = new ReactiveProperty<BigInteger>(1000000022);
+            _reactiveSplitNum = new ReactiveProperty<BigInteger>();
         }
+
+        BigInteger ISlimeNum.Num => _reactiveSplitNum.Value;
 
         IObservable<BigInteger> ISlimeNum.OnChangeAsObservable()
         {

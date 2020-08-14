@@ -25,7 +25,7 @@ namespace SlimeFarm.Scripts.Domains.Entity
 
         public MoneyEntity()
         {
-            _money = new ReactiveProperty<BigInteger>(100000);
+            _money = new ReactiveProperty<BigInteger>();
         }
 
         IObservable<BigInteger> IMoney.OnChangeAsObservable()

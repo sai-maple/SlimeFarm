@@ -6,7 +6,7 @@ namespace SlimeFarm.Scripts.Presentation.View
 {
     public class LootSceneLoader : MonoBehaviour
     {
-        private async void Awake()
+        private async void Start()
         {
             if (!SceneManager.GetSceneByName("GameScene").isLoaded)
             {
