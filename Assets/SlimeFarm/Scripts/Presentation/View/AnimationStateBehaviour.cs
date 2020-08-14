@@ -5,7 +5,7 @@ using UnityEngine;
 
 namespace SlimeFarm.Scripts.Presentation.View
 {
-    public class ScreenStateBehaviour : StateMachineBehaviour, IDisposable
+    public class AnimationStateBehaviour : StateMachineBehaviour, IDisposable
     {
         private readonly ReactiveProperty<int> _animationState = new ReactiveProperty<int>();
 

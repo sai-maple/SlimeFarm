@@ -1,3 +1,4 @@
+using SlimeFarm.Scripts.Application.Signal;
 using SlimeFarm.Scripts.Data.Repository;
 using SlimeFarm.Scripts.Domains.Entity;
 using SlimeFarm.Scripts.Domains.UseCase;
@@ -10,6 +11,7 @@ namespace SlimeFarm.Scripts.Application.Installer
         public override void InstallBindings()
         {
             SignalBusInstaller.Install(Container);
+            Container.DeclareSignal<ShipSignal>();
 
             Container.BindInterfacesTo<DayTimeEntity>()
                 .AsSingle();
@@ -30,7 +32,7 @@ namespace SlimeFarm.Scripts.Application.Installer
                 .AsSingle();
             Container.BindInterfacesTo<ShipUseCaseUseCase>()
                 .AsSingle();
-            
+
             Container.BindInterfacesTo<FarmLevelRepository>()
                 .AsSingle();
         }

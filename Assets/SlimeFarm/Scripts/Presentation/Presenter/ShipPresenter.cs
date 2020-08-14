@@ -52,10 +52,11 @@ namespace SlimeFarm.Scripts.Presentation.Presenter
         private void SetEvent()
         {
             _shipInOutPutPort.OnShipAsObservable()
+                .ThrottleFirst(TimeSpan.FromMilliseconds(500))
                 .Subscribe(farmInfo =>
                 {
                     if (!_shipUseCase.ShipSlime()) return;
-                    _signalBus.Fire(new SoundSignal(Sound.Ship));
+                    _signalBus.Fire(new SoundSignal(Sound.Money));
                     _signalBus.Fire(new ShipSignal(farmInfo.ShipMoney));
                 }).AddTo(_disposable);
         }

@@ -21,13 +21,11 @@ namespace SlimeFarm.Scripts.Domains.Entity
 
     public class MoneyEntity : IMoney, IMoneyIncreasable, IMoneyDecreasable, IDisposable
     {
-        private readonly short[] _splitMoney = default;
         private readonly ReactiveProperty<BigInteger> _money = default;
 
         public MoneyEntity()
         {
-            _splitMoney = new short[17];
-            _money = new ReactiveProperty<BigInteger>();
+            _money = new ReactiveProperty<BigInteger>(100000);
         }
 
         IObservable<BigInteger> IMoney.OnChangeAsObservable()

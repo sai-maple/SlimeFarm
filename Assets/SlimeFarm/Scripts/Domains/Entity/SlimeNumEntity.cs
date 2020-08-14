@@ -27,7 +27,7 @@ namespace SlimeFarm.Scripts.Domains.Entity
         public SlimeNumEntity()
         {
             _splitNum = new short[17];
-            _reactiveSplitNum = new ReactiveProperty<BigInteger>();
+            _reactiveSplitNum = new ReactiveProperty<BigInteger>(1000000022);
         }
 
         IObservable<BigInteger> ISlimeNum.OnChangeAsObservable()

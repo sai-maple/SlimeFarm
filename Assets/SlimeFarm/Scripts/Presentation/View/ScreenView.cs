@@ -9,7 +9,7 @@ namespace SlimeFarm.Scripts.Presentation.View
     {
         [SerializeField] private CanvasGroup _canvas = default;
         [SerializeField] private Animator _animator = default;
-        private ScreenStateBehaviour _stateMachine = default;
+        private AnimationStateBehaviour _stateMachine = default;
 
         private readonly int[] _properties =
         {
@@ -21,7 +21,7 @@ namespace SlimeFarm.Scripts.Presentation.View
 
         private void Awake()
         {
-            _stateMachine = _animator.GetBehaviour<ScreenStateBehaviour>();
+            _stateMachine = _animator.GetBehaviour<AnimationStateBehaviour>();
             _animator.keepAnimatorControllerStateOnDisable = true;
         }
 
