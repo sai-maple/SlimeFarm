@@ -21,13 +21,13 @@ namespace SlimeFarm.Scripts.Presentation.View
 
         async void IAudioOutputPort.PlayOneShot(Sound sound)
         {
-            if (!_clips.ContainsKey(sound))
-            {
-                var clip = await Addressables.LoadAssetAsync<AudioClip>(sound.ToString());
-                _clips.Add(sound, clip);
-            }
-
-            _audio.PlayOneShot(_clips[sound]);
+            // if (!_clips.ContainsKey(sound))
+            // {
+            //     var clip = await Addressables.LoadAssetAsync<AudioClip>(sound.ToString());
+            //     _clips.Add(sound, clip);
+            // }
+            //
+            // _audio.PlayOneShot(_clips[sound]);
         }
     }
 }
