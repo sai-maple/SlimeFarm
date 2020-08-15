@@ -13,8 +13,8 @@ namespace SlimeFarm.Scripts.Application.Installer
             SignalBusInstaller.Install(Container);
             Container.DeclareSignal<ShipSignal>();
 
-            Container.BindInterfacesTo<DayTimeEntity>()
-                .AsSingle();
+            TimeInstaller.Install(Container);
+            
             Container.BindInterfacesTo<FarmInfoEntity>()
                 .AsSingle();
             Container.BindInterfacesTo<ItemEntity>()
@@ -36,6 +36,8 @@ namespace SlimeFarm.Scripts.Application.Installer
                 .AsSingle();
 
             Container.BindInterfacesTo<FarmLevelRepository>()
+                .AsSingle();
+            Container.BindInterfacesTo<ItemInfoRepository>()
                 .AsSingle();
         }
     }

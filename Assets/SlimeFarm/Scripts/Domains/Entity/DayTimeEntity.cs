@@ -8,7 +8,7 @@ namespace SlimeFarm.Scripts.Domains.Entity
         IReadOnlyReactiveProperty<int> OnChangeAsObservable();
     }
 
-    public interface ISunAngle
+    public interface ISkyAngle
     {
         IReadOnlyReactiveProperty<int> OnChangeAsObservable();
     }
@@ -18,41 +18,41 @@ namespace SlimeFarm.Scripts.Domains.Entity
         void Update();
     }
 
-    public class DayTimeEntity : IDayTimeUpdatable, IDay, ISunAngle, IDisposable
+    public class DayTimeEntity : IDayTimeUpdatable, IDay, ISkyAngle, IDisposable
     {
-        private const int FrameTime = 12;
+        private const int FrameTime = 3;
 
         private readonly ReactiveProperty<int> _day = default;
-        private readonly ReactiveProperty<int> _sunAngle = default;
+        private readonly ReactiveProperty<int> _skyAngle = default;
 
         public DayTimeEntity()
         {
             _day = new ReactiveProperty<int>();
-            _sunAngle = new ReactiveProperty<int>();
+            _skyAngle = new ReactiveProperty<int>();
         }
-
+        
         IReadOnlyReactiveProperty<int> IDay.OnChangeAsObservable()
         {
             return _day;
         }
 
-        IReadOnlyReactiveProperty<int> ISunAngle.OnChangeAsObservable()
+        IReadOnlyReactiveProperty<int> ISkyAngle.OnChangeAsObservable()
         {
-            return _sunAngle;
+            return _skyAngle;
         }
 
         void IDayTimeUpdatable.Update()
         {
-            _sunAngle.Value += FrameTime;
-            if (_sunAngle.Value < 360) return;
-            _sunAngle.Value = 0;
+            _skyAngle.Value += FrameTime;
+            if (_skyAngle.Value < 360) return;
+            _skyAngle.Value = 0;
             _day.Value++;
         }
 
         public void Dispose()
         {
             _day?.Dispose();
-            _sunAngle?.Dispose();
+            _skyAngle?.Dispose();
         }
     }
 }

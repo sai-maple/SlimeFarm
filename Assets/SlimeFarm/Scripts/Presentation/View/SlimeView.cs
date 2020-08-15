@@ -20,7 +20,7 @@ namespace SlimeFarm.Scripts.Presentation.View
 
         private Tweener _tweener = default;
         private int _index = default;
-        
+
         private void Start()
         {
             _stateMachine = _animator.GetBehaviour<StateRandom>();
@@ -63,11 +63,14 @@ namespace SlimeFarm.Scripts.Presentation.View
             _animator.SetTrigger(DespawnHash);
             await UniTask.Delay(TimeSpan.FromSeconds(1));
             _tweener.Kill();
+            // ゲーム終了時、IDisposableとOnCompletedによって2回Dispose()が呼ばれるのでそのための回避
+            if (this == null) return;
             _pool?.Despawn(this);
         }
 
         private void OnDestroy()
         {
+            _tweener.Kill();
             _stateMachine.Dispose();
         }
     }

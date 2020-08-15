@@ -1,11 +1,12 @@
 using System.Collections.Generic;
 using System.Linq;
 using SlimeFarm.Scripts.Application.DTO;
+using SlimeFarm.Scripts.Domains.UseCase;
 using UnityEngine;
 
 namespace SlimeFarm.Scripts.Data.Repository
 {
-    public class ItemInfoRepository
+    public class ItemInfoRepository : IItemRepository
     {
         private readonly Dictionary<short, List<ItemInfo>> _itemInfos = default;
 
@@ -23,6 +24,11 @@ namespace SlimeFarm.Scripts.Data.Repository
         public IEnumerable<ItemInfo> GetCurrentShopItems(IEnumerable<(short, short)> currentItemLevel)
         {
             return currentItemLevel.Select(info => _itemInfos[info.Item1][info.Item2]);
+        }
+
+        ItemInfo IItemRepository.GetItemInfo(short itemId, short currentNum)
+        {
+            return _itemInfos[itemId][currentNum];
         }
     }
 }

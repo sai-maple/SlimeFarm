@@ -7,12 +7,12 @@ namespace SlimeFarm.Scripts.Application.DTO
     [Serializable]
     public class ItemInfo
     {
-        [SerializeField] private short item_id = default;
+        [SerializeField] private short itemId = default;
         [SerializeField] private short level = default;
-        [SerializeField] public BigInteger performance = default;
-        [SerializeField] public BigInteger cost = default;
+        [SerializeField] private BigInteger performance = default;
+        [SerializeField] private BigInteger cost = default;
 
-        public short ItemId => item_id;
+        public short ItemId => itemId;
         public short Level => level;
         public BigInteger Performance => performance;
         public BigInteger Cost => cost;
