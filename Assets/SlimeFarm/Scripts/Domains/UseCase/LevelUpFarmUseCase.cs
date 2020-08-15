@@ -6,6 +6,7 @@ namespace SlimeFarm.Scripts.Domains.UseCase
     public interface ILevelUpFarmUseCase
     {
         bool LevelUp();
+        FarmInfo GetFarmInfo();
     }
 
     public interface IFarmRepository
@@ -32,11 +33,16 @@ namespace SlimeFarm.Scripts.Domains.UseCase
             _farmInfo = farmInfo;
         }
 
-        public bool LevelUp()
+        bool ILevelUpFarmUseCase.LevelUp()
         {
             if (_moneyDecreasable.Decrease(_farmInfo.CurrentInfo.LevelUpCost)) return false;
             _farmLevelUpdatable.LevelUp(_farmRepository.GetNextFarmInfo(_farmInfo.CurrentInfo));
             return true;
+        }
+
+        FarmInfo ILevelUpFarmUseCase.GetFarmInfo()
+        {
+            return _farmRepository.GetNextFarmInfo(_farmInfo.CurrentInfo);
         }
     }
 }

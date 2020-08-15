@@ -7,5 +7,6 @@ namespace SlimeFarm.Scripts.Application.Enum
         Spawn,
         Money,
         Day,
+        Buy,
     }
 }
