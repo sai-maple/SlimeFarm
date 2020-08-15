@@ -11,22 +11,16 @@ using Random = UnityEngine.Random;
 
 namespace SlimeFarm.Scripts.Presentation.View
 {
-    public class SlimeView : MonoBehaviour, IPoolable<IMemoryPool>, ISlime
+    public class SlimeView : MonoBehaviour, IPoolable<int, IMemoryPool>, ISlime, IDisposable
     {
         [SerializeField] private Animator _animator = default;
         private StateRandom _stateMachine = default;
         private IMemoryPool _pool = default;
-        private static readonly int Despawn = Animator.StringToHash("DeSpawn");
+        private static readonly int DespawnHash = Animator.StringToHash("DeSpawn");
 
         private Tweener _tweener = default;
-
-        private readonly Subject<Unit> _subject = new Subject<Unit>();
-
-        IObservable<Unit> ISlime.OnSpawnedAsObservable()
-        {
-            return _subject.Publish().RefCount();
-        }
-
+        private int _index = default;
+        
         private void Start()
         {
             _stateMachine = _animator.GetBehaviour<StateRandom>();
@@ -44,12 +38,12 @@ namespace SlimeFarm.Scripts.Presentation.View
                 });
         }
 
-        public void OnSpawned(IMemoryPool pool)
+        public void OnSpawned(int index, IMemoryPool pool)
         {
             _pool = pool;
+            _index = index;
             transform.localPosition = new Vector3(Random.Range(-1.7f, 1.7f), Random.Range(-1.7f, 1.5f));
             _animator.Play("Spawn");
-            _subject.OnNext(Unit.Default);
         }
 
         public void OnDespawned()
@@ -57,10 +51,16 @@ namespace SlimeFarm.Scripts.Presentation.View
             _pool = null;
         }
 
+        public void Despawn(int index)
+        {
+            if (index != _index) return;
+            Dispose();
+        }
+
         public async void Dispose()
         {
             if (!gameObject.activeSelf) return;
-            _animator.SetTrigger(Despawn);
+            _animator.SetTrigger(DespawnHash);
             await UniTask.Delay(TimeSpan.FromSeconds(1));
             _tweener.Kill();
             _pool?.Despawn(this);
@@ -69,8 +69,6 @@ namespace SlimeFarm.Scripts.Presentation.View
         private void OnDestroy()
         {
             _stateMachine.Dispose();
-            _subject.OnCompleted();
-            _subject.Dispose();
         }
     }
 }

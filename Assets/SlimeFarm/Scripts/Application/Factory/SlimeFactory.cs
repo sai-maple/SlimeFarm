@@ -3,11 +3,11 @@ using Zenject;
 
 namespace SlimeFarm.Scripts.Application.Factory
 {
-    public class SlimePool : MonoPoolableMemoryPool<IMemoryPool, SlimeView>
+    public class SlimePool : MonoPoolableMemoryPool<int, IMemoryPool, SlimeView>
     {
     }
 
-    public class SlimeFactory : PlaceholderFactory<SlimeView>
+    public class SlimeFactory : PlaceholderFactory<int, SlimeView>
     {
     }
 }

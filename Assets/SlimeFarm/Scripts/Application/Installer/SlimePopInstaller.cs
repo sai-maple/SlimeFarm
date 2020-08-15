@@ -19,8 +19,8 @@ namespace SlimeFarm.Scripts.Application.Installer
             Container.BindInterfacesTo<TapArea>()
                 .FromComponentOnRoot();
 
-            Container.BindFactory<SlimeView, SlimeFactory>()
-                .FromPoolableMemoryPool<SlimeView, SlimePool>(poolBinder => poolBinder
+            Container.BindFactory<int, SlimeView, SlimeFactory>()
+                .FromPoolableMemoryPool<int, SlimeView, SlimePool>(poolBinder => poolBinder
                     .WithMaxSize(50)
                     .FromComponentInNewPrefab(_slimePrefab)
                     .UnderTransform(transform));

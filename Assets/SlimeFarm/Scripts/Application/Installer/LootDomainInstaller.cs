@@ -23,14 +23,16 @@ namespace SlimeFarm.Scripts.Application.Installer
                 .AsSingle();
             Container.BindInterfacesTo<SlimeNumEntity>()
                 .AsSingle();
+            Container.BindInterfacesTo<IndexDespawnIndexEntity>()
+                .AsSingle();
 
             Container.BindInterfacesTo<BuyItemUseCase>()
-                .AsSingle();
-            Container.BindInterfacesTo<ClickSlimeUseCase>()
                 .AsSingle();
             Container.BindInterfacesTo<LevelUpFarmUseCase>()
                 .AsSingle();
             Container.BindInterfacesTo<ShipUseCaseUseCase>()
+                .AsSingle();
+            Container.BindInterfacesTo<ClickSlimeUseCase>()
                 .AsSingle();
 
             Container.BindInterfacesTo<FarmLevelRepository>()
