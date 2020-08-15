@@ -11,13 +11,18 @@ namespace SlimeFarm.Scripts.Data.Repository
 
         public FarmLevelRepository()
         {
-            var jsonString = Resources.Load<TextAsset>("").ToString();
-            _farmInfos = JsonUtility.FromJson<List<FarmInfo>>(jsonString);
+            var json = Resources.Load<TextAsset>("FarmInfo");
+            _farmInfos = JsonUtility.FromJson<Data>(json.text).data;
         }
 
         FarmInfo IFarmRepository.GetNextFarmInfo(FarmInfo currentInfo)
         {
             return _farmInfos[currentInfo.Level];
+        }
+
+        public class Data
+        {
+            public List<FarmInfo> data;
         }
     }
 }

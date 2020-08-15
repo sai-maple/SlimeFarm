@@ -3,90 +3,86 @@
     {
       "_name": "農場",
       "_level": 0,
-      "_description": "説明",
-      "_levelUpCost": 1000,
-      "_shipMoney": 100,
-      "_shipSlime": 10
+      "_levelUpCost": "1000",
+      "_shipMoney": "100",
+      "_shipSlime": "10"
     },
     {
       "_name": "農場",
       "_level": 1,
-      "_description": "説明",
-      "_levelUpCost": 10000,
-      "_shipMoney": 1000,
-      "_shipSlime": 100
+      "_levelUpCost": "1000",
+      "_shipMoney": "100",
+      "_shipSlime": "10"
     },
     {
       "_name": "農場",
       "_level": 2,
-      "_description": "説明",
-      "_levelUpCost": 100000,
-      "_shipMoney": 10000,
-      "_shipSlime": 1000
+      "_levelUpCost": "100000",
+      "_shipMoney": "1000",
+      "_shipSlime": "100"
     },
     {
       "_name": "農場",
       "_level": 3,
-      "_description": "説明",
-      "_levelUpCost": 1000000,
-      "_shipMoney": 100000,
-      "_shipSlime": 10000
+      "_levelUpCost": "1000000",
+      "_shipMoney": "10000",
+      "_shipSlime": "1000"
     },
     {
       "_name": "農場",
       "_level": 4,
-      "_description": "説明",
-      "_levelUpCost": 10000000,
-      "_shipMoney": 1000000,
-      "_shipSlime": 100000
+      "_levelUpCost": "10000000",
+      "_shipMoney": "100000",
+      "_shipSlime": "10000"
     },
     {
       "_name": "農場",
       "_level": 5,
-      "_description": "説明",
-      "_levelUpCost": 100000000,
-      "_shipMoney": 10000000,
-      "_shipSlime": 1000000
+      "_levelUpCost": "100000000",
+      "_shipMoney": "10000000",
+      "_shipSlime": "1000000"
     },
     {
       "_name": "農場",
       "_level": 6,
-      "_description": "説明",
-      "_levelUpCost": 100000000,
-      "_shipMoney": 10000000,
-      "_shipSlime": 1000000
+      "_levelUpCost": "100000000",
+      "_shipMoney": "10000000",
+      "_shipSlime": "1000000"
     },
     {
       "_name": "農場",
       "_level": 7,
-      "_description": "説明",
-      "_levelUpCost": 1000000000,
-      "_shipMoney": 100000000,
-      "_shipSlime": 10000000
+      "_levelUpCost": "1000000000",
+      "_shipMoney": "100000000",
+      "_shipSlime": "10000000"
     },
     {
       "_name": "農場",
       "_level": 8,
-      "_description": "説明",
-      "_levelUpCost": 10000000000,
-      "_shipMoney": 1000000000,
-      "_shipSlime": 100000000
+      "_levelUpCost": "10000000000",
+      "_shipMoney": "1000000000",
+      "_shipSlime": "100000000"
     },
     {
       "_name": "農場",
       "_level": 9,
-      "_description": "説明",
-      "_levelUpCost": 100000000000,
-      "_shipMoney": 10000000000,
-      "_shipSlime": 1000000000
+      "_levelUpCost": "100000000000",
+      "_shipMoney": "10000000000",
+      "_shipSlime": "1000000000"
     },
     {
       "_name": "農場",
       "_level": 10,
-      "_description": "説明",
-      "_levelUpCost": 100000000000,
-      "_shipMoney": 10000000000,
-      "_shipSlime": 1000000000
+      "_levelUpCost": "100000000000",
+      "_shipMoney": "10000000000",
+      "_shipSlime": "1000000000"
+    },
+    {
+      "_name": "農場",
+      "_level": 10,
+      "_levelUpCost": "100000000000",
+      "_shipMoney": "10000000000",
+      "_shipSlime": "1000000000"
     }
   ]
 }

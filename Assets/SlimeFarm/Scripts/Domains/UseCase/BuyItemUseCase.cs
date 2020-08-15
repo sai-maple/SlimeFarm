@@ -5,12 +5,13 @@ namespace SlimeFarm.Scripts.Domains.UseCase
 {
     public interface IBuyItemUseCase
     {
-        bool Buy(short itemId);
+        bool Buy(string itemId);
+        ItemInfo GetItemInfo(string itemId);
     }
 
     public interface IItemRepository
     {
-        ItemInfo GetItemInfo(short itemId, short currentNum);
+        ItemInfo GetItemInfo(string itemId, short currentNum);
     }
 
     public class BuyItemUseCase : IBuyItemUseCase
@@ -29,12 +30,17 @@ namespace SlimeFarm.Scripts.Domains.UseCase
             _itemRepository = itemRepository;
         }
 
-        bool IBuyItemUseCase.Buy(short itemId)
+        bool IBuyItemUseCase.Buy(string itemId)
         {
             var itemInfo = _itemRepository.GetItemInfo(itemId, _item.Num(itemId));
             if (!_moneyDecreasable.Decrease(itemInfo.Cost)) return false;
             _item.Add(itemId, itemInfo.Performance);
             return true;
+        }
+
+        ItemInfo IBuyItemUseCase.GetItemInfo(string itemId)
+        {
+            return _itemRepository.GetItemInfo(itemId, _item.Num(itemId));
         }
     }
 }

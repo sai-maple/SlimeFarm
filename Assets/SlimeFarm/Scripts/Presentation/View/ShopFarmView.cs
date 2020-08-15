@@ -24,8 +24,9 @@ namespace SlimeFarm.Scripts.Presentation.View
 
         void IShopFarmInOutPort.OnUpdateInfo(FarmInfo farmInfo)
         {
-            _name.text = $"{farmInfo.Name} Lv{farmInfo.Level}";
-            _description.text = farmInfo.Description;
+            _name.text = $"農場 Lv{farmInfo.Level}";
+            _description.text =
+                $"{NumberConverter.ConvertToChineseNumber(farmInfo.ShipSlime)}匹出荷あたり{NumberConverter.ConvertToChineseNumber(farmInfo.ShipMoney)}円";
             _cost.text = $"{NumberConverter.ConvertToChineseNumber(farmInfo.LevelUpCost)}円";
 
             if (farmInfo.Level == 10)

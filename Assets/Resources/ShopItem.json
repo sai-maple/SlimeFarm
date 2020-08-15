@@ -1,0 +1,146 @@
+{
+  "item_0": [
+    {
+      "_itemId": "0",
+      "_name": "スコップ",
+      "_level": 0,
+      "_performance": "0",
+      "_cost": "10"
+    },
+    {
+      "_itemId": "0",
+      "_name": "スコップ",
+      "_level": 1,
+      "_performance": "4",
+      "_cost": "15"
+    }
+  ],
+  "item_1": [
+    {
+      "_itemId": "1",
+      "_name": "餌",
+      "_level": 0,
+      "_performance": "0",
+      "_cost": "10"
+    },
+    {
+      "_itemId": "1",
+      "_name": "餌",
+      "_level": 1,
+      "_performance": "4",
+      "_cost": "15"
+    }
+  ],
+  "item_2": [
+    {
+      "_itemId": "2",
+      "_name": "肥料",
+      "_level": 0,
+      "_performance": "0",
+      "_cost": "10"
+    },
+    {
+      "_itemId": "2",
+      "_name": "肥料",
+      "_level": 1,
+      "_performance": "4",
+      "_cost": "15"
+    }
+  ],
+  "item_3": [
+    {
+      "_itemId": "3",
+      "_name": "iPhone",
+      "_level": 0,
+      "_performance": "0",
+      "_cost": "10"
+    },
+    {
+      "_itemId": "3",
+      "_name": "iPhone",
+      "_level": 1,
+      "_performance": "4",
+      "_cost": "15"
+    }
+  ],
+  "item_4": [
+    {
+      "_itemId": "4",
+      "_name": "連打ツール",
+      "_level": 0,
+      "_performance": "0",
+      "_cost": "10"
+    },
+    {
+      "_itemId": "4",
+      "_name": "連打ツール",
+      "_level": 1,
+      "_performance": "4",
+      "_cost": "15"
+    }
+  ],
+  "item_5": [
+    {
+      "_itemId": "5",
+      "_name": "工場",
+      "_level": 0,
+      "_performance": "0",
+      "_cost": "10"
+    },
+    {
+      "_itemId": "5",
+      "_name": "工場",
+      "_level": 1,
+      "_performance": "4",
+      "_cost": "15"
+    }
+  ],
+  "item_6": [
+    {
+      "_itemId": "6",
+      "_name": "ピラミッド",
+      "_level": 0,
+      "_performance": "0",
+      "_cost": "10"
+    },
+    {
+      "_itemId": "6",
+      "_name": "ピラミッド",
+      "_level": 1,
+      "_performance": "4",
+      "_cost": "15"
+    }
+  ],
+  "item_7": [
+    {
+      "_itemId": "7",
+      "_name": "彗星",
+      "_level": 0,
+      "_performance": "0",
+      "_cost": "10"
+    },
+    {
+      "_itemId": "7",
+      "_name": "彗星",
+      "_level": 1,
+      "_performance": "4",
+      "_cost": "15"
+    }
+  ],
+  "item_8": [
+    {
+      "_itemId": "8",
+      "_name": "改造",
+      "_level": 0,
+      "_performance": "0",
+      "_cost": "10"
+    },
+    {
+      "_itemId": "8",
+      "_name": "改造",
+      "_level": 1,
+      "_performance": "4",
+      "_cost": "15"
+    }
+  ]
+}

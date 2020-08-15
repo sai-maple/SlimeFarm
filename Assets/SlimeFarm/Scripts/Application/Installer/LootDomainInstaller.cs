@@ -1,5 +1,4 @@
 using SlimeFarm.Scripts.Application.Signal;
-using SlimeFarm.Scripts.Data.Repository;
 using SlimeFarm.Scripts.Domains.Entity;
 using SlimeFarm.Scripts.Domains.UseCase;
 using Zenject;
@@ -25,16 +24,10 @@ namespace SlimeFarm.Scripts.Application.Installer
                 .AsSingle();
             Container.BindInterfacesTo<IndexDespawnIndexEntity>()
                 .AsSingle();
-
-            Container.BindInterfacesTo<BuyItemUseCase>()
-                .AsSingle();
+            
             Container.BindInterfacesTo<ShipUseCaseUseCase>()
                 .AsSingle();
             Container.BindInterfacesTo<ClickSlimeUseCase>()
-                .AsSingle();
-
-            
-            Container.BindInterfacesTo<ItemInfoRepository>()
                 .AsSingle();
         }
     }

@@ -23,7 +23,7 @@ namespace SlimeFarm.Scripts.Domains.Entity
 
         public FarmInfoEntity()
         {
-            _farmInfo = new ReactiveProperty<FarmInfo>(new FarmInfo("農場",1,"10匹出荷で100円", 100, 100, 10));
+            _farmInfo = new ReactiveProperty<FarmInfo>(new FarmInfo(1, "100", "100", "10"));
         }
 
         IReadOnlyReactiveProperty<FarmInfo> IFarmInfo.OnChangeAsObservable()

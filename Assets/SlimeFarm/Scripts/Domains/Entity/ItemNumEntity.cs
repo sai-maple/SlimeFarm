@@ -5,13 +5,13 @@ namespace SlimeFarm.Scripts.Domains.Entity
 {
     public interface IItem
     {
-        void Add(short itemId, BigInteger performance);
-        short Num(short itemId);
+        void Add(string itemId, BigInteger performance);
+        short Num(string itemId);
     }
 
     public interface IItemDictionary
     {
-        IReadOnlyDictionary<short, short> Value { get; }
+        IReadOnlyDictionary<string, short> Value { get; }
     }
 
     public interface IFarmPerformance
@@ -22,28 +22,28 @@ namespace SlimeFarm.Scripts.Domains.Entity
     public class ItemEntity : IItem, IFarmPerformance, IItemDictionary
     {
         private BigInteger _slimePerFrame = default;
-        private readonly Dictionary<short, short> _itemNum = default;
+        private readonly Dictionary<string, short> _itemNum = default;
 
-        IReadOnlyDictionary<short, short> IItemDictionary.Value => _itemNum;
+        IReadOnlyDictionary<string, short> IItemDictionary.Value => _itemNum;
         BigInteger IFarmPerformance.SlimePerFrame => _slimePerFrame;
 
         public ItemEntity()
         {
             _slimePerFrame = new BigInteger();
-            _itemNum = new Dictionary<short, short>();
-            for (short i = 0; i < 10; i++)
+            _itemNum = new Dictionary<string, short>();
+            for (short i = 0; i < 9; i++)
             {
-                _itemNum.Add(i, 0);
+                _itemNum.Add(i.ToString(), 0);
             }
         }
 
-        void IItem.Add(short itemId, BigInteger performance)
+        void IItem.Add(string itemId, BigInteger performance)
         {
             _itemNum[itemId]++;
             _slimePerFrame += performance;
         }
 
-        short IItem.Num(short itemId)
+        short IItem.Num(string itemId)
         {
             return _itemNum[itemId];
         }

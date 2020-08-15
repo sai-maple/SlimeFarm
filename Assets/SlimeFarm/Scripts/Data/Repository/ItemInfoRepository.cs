@@ -6,29 +6,50 @@ using UnityEngine;
 
 namespace SlimeFarm.Scripts.Data.Repository
 {
-    public class ItemInfoRepository : IItemRepository
+    public class ItemInfoRepository : IItemRepository, IShopItemListRepository
     {
-        private readonly Dictionary<short, List<ItemInfo>> _itemInfos = default;
+        private readonly Dictionary<string, List<ItemInfo>> _itemInfos = default;
 
         public ItemInfoRepository()
         {
-            var jsonString = Resources.Load<TextAsset>("").ToString();
-            _itemInfos = JsonUtility.FromJson<Dictionary<short, List<ItemInfo>>>(jsonString);
+            var jsonString = Resources.Load<TextAsset>("ShopItem").text;
+            var data = JsonUtility.FromJson<Data>(jsonString);
+            _itemInfos = new Dictionary<string, List<ItemInfo>>
+            {
+                {"0", data.item_0},
+                {"1", data.item_1},
+                {"2", data.item_2},
+                {"3", data.item_3},
+                {"4", data.item_4},
+                {"5", data.item_5},
+                {"6", data.item_6},
+                {"7", data.item_7},
+                {"8", data.item_8}
+            };
         }
 
-        public IEnumerable<ItemInfo> GetDefaultShopItems()
+        IEnumerable<ItemInfo> IShopItemListRepository.GetCurrentShopItems(
+            IReadOnlyDictionary<string, short> currentItemLevel)
         {
-            return _itemInfos.Values.Select(infos => infos[0]);
+            return currentItemLevel.Keys.Select(itemId => _itemInfos[itemId][currentItemLevel[itemId]]);
         }
 
-        public IEnumerable<ItemInfo> GetCurrentShopItems(IEnumerable<(short, short)> currentItemLevel)
+        ItemInfo IItemRepository.GetItemInfo(string itemId, short currentLevel)
         {
-            return currentItemLevel.Select(info => _itemInfos[info.Item1][info.Item2]);
+            return _itemInfos[itemId][currentLevel];
         }
 
-        ItemInfo IItemRepository.GetItemInfo(short itemId, short currentNum)
+        public class Data
         {
-            return _itemInfos[itemId][currentNum];
+            public List<ItemInfo> item_0;
+            public List<ItemInfo> item_1;
+            public List<ItemInfo> item_2;
+            public List<ItemInfo> item_3;
+            public List<ItemInfo> item_4;
+            public List<ItemInfo> item_5;
+            public List<ItemInfo> item_6;
+            public List<ItemInfo> item_7;
+            public List<ItemInfo> item_8;
         }
     }
 }
