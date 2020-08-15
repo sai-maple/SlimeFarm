@@ -4,7 +4,7 @@ using Zenject;
 
 namespace SlimeFarm.Scripts.Application.Installer
 {
-    public class AudioInstaller : MonoInstaller<AudioInstaller>
+    public class AudioPackage : MonoInstaller<AudioPackage>
     {
         public override void InstallBindings()
         {
@@ -12,7 +12,7 @@ namespace SlimeFarm.Scripts.Application.Installer
             Container.DeclareSignal<BgmSignal>();
 
             Container.Bind<AudioPresenter>()
-                .AsSingle();
+                .AsSingle().NonLazy();
 
             Container.BindSignal<SoundSignal>()
                 .ToMethod<AudioPresenter>(x => x.ReceiveSound).FromResolve();

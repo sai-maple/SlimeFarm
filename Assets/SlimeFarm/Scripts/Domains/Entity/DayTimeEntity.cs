@@ -27,10 +27,10 @@ namespace SlimeFarm.Scripts.Domains.Entity
 
         public DayTimeEntity()
         {
-            _day = new ReactiveProperty<int>();
+            _day = new ReactiveProperty<int>(1);
             _skyAngle = new ReactiveProperty<int>();
         }
-        
+
         IReadOnlyReactiveProperty<int> IDay.OnChangeAsObservable()
         {
             return _day;

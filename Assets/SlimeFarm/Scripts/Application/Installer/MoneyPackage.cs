@@ -5,15 +5,15 @@ using Zenject;
 
 namespace SlimeFarm.Scripts.Application.Installer
 {
-    [RequireComponent(typeof(ShipButton))]
-    public class ShipButtonInstaller : MonoInstaller<ShipButtonInstaller>
+    [RequireComponent(typeof(NumberWithUnitView))]
+    public class MoneyPackage : MonoInstaller<MoneyPackage>
     {
         public override void InstallBindings()
         {
-            Container.BindInterfacesTo<ShipPresenter>()
-                .AsSingle();
+            Container.BindInterfacesTo<MoneyPresenter>()
+                .AsSingle().NonLazy();
 
-            Container.BindInterfacesTo<ShipButton>()
+            Container.BindInterfacesTo<NumberWithUnitView>()
                 .FromComponentOnRoot();
         }
     }

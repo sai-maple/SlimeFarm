@@ -6,7 +6,7 @@ using Zenject;
 namespace SlimeFarm.Scripts.Application.Installer
 {
     [RequireComponent(typeof(SkyView))]
-    public class SkyInstaller : MonoInstaller<SkyInstaller>
+    public class SkyPackage : MonoInstaller<SkyPackage>
     {
         public override void InstallBindings()
         {

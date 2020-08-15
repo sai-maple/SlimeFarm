@@ -7,14 +7,14 @@ using Zenject;
 
 namespace SlimeFarm.Scripts.Application.Installer
 {
-    public class ShipTrackInstaller : MonoInstaller<ShipTrackInstaller>
+    public class ShipTrackPackage : MonoInstaller<ShipTrackPackage>
     {
         [SerializeField] private ShipTrackView _shipTrackPrefab = default;
 
         public override void InstallBindings()
         {
             Container.Bind<TrackPresenter>()
-                .AsSingle();
+                .AsSingle().NonLazy();
 
             Container.BindSignal<ShipSignal>()
                 .ToMethod<TrackPresenter>(p => p.Ship)

@@ -7,14 +7,14 @@ using Zenject;
 namespace SlimeFarm.Scripts.Application.Installer
 {
     [RequireComponent(typeof(TapArea))]
-    public class SlimePopInstaller : MonoInstaller<SlimePopInstaller>
+    public class SlimeSpawnPackage : MonoInstaller<SlimeSpawnPackage>
     {
         [SerializeField] private SlimeView _slimePrefab = default;
 
         public override void InstallBindings()
         {
             Container.BindInterfacesTo<SlimeSpawnPresenter>()
-                .AsSingle();
+                .AsSingle().NonLazy();
 
             Container.BindInterfacesTo<TapArea>()
                 .FromComponentOnRoot();

@@ -5,16 +5,16 @@ using Zenject;
 
 namespace SlimeFarm.Scripts.Application.Installer
 {
-    [RequireComponent(typeof(NumberWithUnitView))]
-    public class SlimeNumInstaller : MonoInstaller<SlimeNumInstaller>
+    [RequireComponent(typeof(SlimeView))]
+    public class SlimeDespawnPackage : MonoInstaller<SlimeDespawnPackage>
     {
         public override void InstallBindings()
         {
-            Container.BindInterfacesTo<SlimeNumPresenter>()
-                .AsSingle();
-
-            Container.BindInterfacesTo<NumberWithUnitView>()
+            Container.BindInterfacesTo<SlimeView>()
                 .FromComponentOnRoot();
+
+            Container.BindInterfacesTo<SlimeDespawnPresenter>()
+                .AsSingle();
         }
     }
 }
