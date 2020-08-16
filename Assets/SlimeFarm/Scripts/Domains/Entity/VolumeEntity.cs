@@ -26,8 +26,8 @@ namespace SlimeFarm.Scripts.Domains.Entity
 
         public VolumeEntity()
         {
-            _bgmVolume = new ReactiveProperty<float>(1);
-            _seVolume = new ReactiveProperty<float>(1);
+            _bgmVolume = new ReactiveProperty<float>(0.5f);
+            _seVolume = new ReactiveProperty<float>(0.5f);
         }
 
         IObservable<float> IVolume.OnBgmChangedAsObservable()
