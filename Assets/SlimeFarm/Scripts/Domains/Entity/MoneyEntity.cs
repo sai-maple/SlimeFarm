@@ -6,6 +6,7 @@ namespace SlimeFarm.Scripts.Domains.Entity
 {
     public interface IMoney
     {
+        BigInteger Num { get; }
         IObservable<BigInteger> OnChangeAsObservable();
     }
 
@@ -27,6 +28,8 @@ namespace SlimeFarm.Scripts.Domains.Entity
         {
             _money = new ReactiveProperty<BigInteger>();
         }
+
+        BigInteger IMoney.Num => _money.Value;
 
         IObservable<BigInteger> IMoney.OnChangeAsObservable()
         {

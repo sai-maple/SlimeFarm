@@ -5,14 +5,77 @@
       "_name": "スコップ",
       "_level": 0,
       "_performance": "2",
-      "_cost": "10"
+      "_cost": "120"
     },
     {
       "_itemId": "0",
       "_name": "スコップ",
       "_level": 1,
-      "_performance": "4",
-      "_cost": "15"
+      "_performance": "2",
+      "_cost": "300"
+    },
+    {
+      "_itemId": "0",
+      "_name": "スコップ",
+      "_level": 2,
+      "_performance": "2",
+      "_cost": "500"
+    },
+    {
+      "_itemId": "0",
+      "_name": "スコップ",
+      "_level": 3,
+      "_performance": "2",
+      "_cost": "580"
+    },
+    {
+      "_itemId": "0",
+      "_name": "スコップ",
+      "_level": 4,
+      "_performance": "2",
+      "_cost": "720"
+    },
+    {
+      "_itemId": "0",
+      "_name": "スコップ",
+      "_level": 5,
+      "_performance": "2",
+      "_cost": "860"
+    },
+    {
+      "_itemId": "0",
+      "_name": "スコップ",
+      "_level": 6,
+      "_performance": "2",
+      "_cost": "1000"
+    },
+    {
+      "_itemId": "0",
+      "_name": "スコップ",
+      "_level": 7,
+      "_performance": "2",
+      "_cost": "1000"
+    },
+    {
+      "_itemId": "0",
+      "_name": "スコップ",
+      "_level": 8,
+      "_performance": "2",
+      "_cost": "1100"
+    },
+    {
+      "_itemId": "0",
+      "_name": "スコップ",
+      "_level": 9,
+      "_performance": "6",
+      "_cost": "1400"
+    },
+    {
+      "_itemId": "0",
+      "_name": "スコップ",
+      "_level": 10,
+      "_performance": "0",
+      "_cost": "0"
     }
   ],
   "item_1": [
@@ -20,15 +83,78 @@
       "_itemId": "1",
       "_name": "餌",
       "_level": 0,
-      "_performance": "2",
-      "_cost": "10"
+      "_performance": "10",
+      "_cost": "500"
     },
     {
       "_itemId": "1",
       "_name": "餌",
       "_level": 1,
-      "_performance": "4",
-      "_cost": "15"
+      "_performance": "10",
+      "_cost": "800"
+    },
+    {
+      "_itemId": "1",
+      "_name": "餌",
+      "_level": 2,
+      "_performance": "10",
+      "_cost": "1400"
+    },
+    {
+      "_itemId": "1",
+      "_name": "餌",
+      "_level": 3,
+      "_performance": "10",
+      "_cost": "1800"
+    },
+    {
+      "_itemId": "1",
+      "_name": "餌",
+      "_level": 4,
+      "_performance": "10",
+      "_cost": "2400"
+    },
+    {
+      "_itemId": "1",
+      "_name": "餌",
+      "_level": 5,
+      "_performance": "10",
+      "_cost": "3100"
+    },
+    {
+      "_itemId": "1",
+      "_name": "餌",
+      "_level": 6,
+      "_performance": "10",
+      "_cost": "3800"
+    },
+    {
+      "_itemId": "1",
+      "_name": "餌",
+      "_level": 7,
+      "_performance": "10",
+      "_cost": "4500"
+    },
+    {
+      "_itemId": "1",
+      "_name": "餌",
+      "_level": 8,
+      "_performance": "10",
+      "_cost": "5200"
+    },
+    {
+      "_itemId": "1",
+      "_name": "餌",
+      "_level": 9,
+      "_performance": "30",
+      "_cost": "5800"
+    },
+    {
+      "_itemId": "1",
+      "_name": "餌",
+      "_level": 10,
+      "_performance": "0",
+      "_cost": "0"
     }
   ],
   "item_2": [
@@ -36,15 +162,78 @@
       "_itemId": "2",
       "_name": "肥料",
       "_level": 0,
-      "_performance": "2",
-      "_cost": "10"
+      "_performance": "100",
+      "_cost": "4500"
     },
     {
       "_itemId": "2",
       "_name": "肥料",
       "_level": 1,
-      "_performance": "4",
-      "_cost": "15"
+      "_performance": "50",
+      "_cost": "5400"
+    },
+    {
+      "_itemId": "2",
+      "_name": "肥料",
+      "_level": 2,
+      "_performance": "50",
+      "_cost": "6300"
+    },
+    {
+      "_itemId": "2",
+      "_name": "肥料",
+      "_level": 3,
+      "_performance": "50",
+      "_cost": "7200"
+    },
+    {
+      "_itemId": "2",
+      "_name": "肥料",
+      "_level": 4,
+      "_performance": "50",
+      "_cost": "8100"
+    },
+    {
+      "_itemId": "2",
+      "_name": "肥料",
+      "_level": 5,
+      "_performance": "50",
+      "_cost": "9000"
+    },
+    {
+      "_itemId": "2",
+      "_name": "肥料",
+      "_level": 6,
+      "_performance": "50",
+      "_cost": "9900"
+    },
+    {
+      "_itemId": "2",
+      "_name": "肥料",
+      "_level": 7,
+      "_performance": "50",
+      "_cost": "10800"
+    },
+    {
+      "_itemId": "2",
+      "_name": "肥料",
+      "_level": 8,
+      "_performance": "50",
+      "_cost": "11700"
+    },
+    {
+      "_itemId": "2",
+      "_name": "肥料",
+      "_level": 9,
+      "_performance": "80",
+      "_cost": "12600"
+    },
+    {
+      "_itemId": "2",
+      "_name": "肥料",
+      "_level": 10,
+      "_performance": "0",
+      "_cost": "0"
     }
   ],
   "item_3": [
@@ -52,15 +241,78 @@
       "_itemId": "3",
       "_name": "iPhone",
       "_level": 0,
-      "_performance": "2",
-      "_cost": "10"
+      "_performance": "800",
+      "_cost": "30000"
     },
     {
       "_itemId": "3",
       "_name": "iPhone",
       "_level": 1,
-      "_performance": "4",
-      "_cost": "15"
+      "_performance": "400",
+      "_cost": "42000"
+    },
+    {
+      "_itemId": "3",
+      "_name": "iPhone",
+      "_level": 2,
+      "_performance": "400",
+      "_cost": "54000"
+    },
+    {
+      "_itemId": "3",
+      "_name": "iPhone",
+      "_level": 3,
+      "_performance": "400",
+      "_cost": "66000"
+    },
+    {
+      "_itemId": "3",
+      "_name": "iPhone",
+      "_level": 4,
+      "_performance": "400",
+      "_cost": "72000"
+    },
+    {
+      "_itemId": "3",
+      "_name": "iPhone",
+      "_level": 5,
+      "_performance": "400",
+      "_cost": "84000"
+    },
+    {
+      "_itemId": "3",
+      "_name": "iPhone",
+      "_level": 6,
+      "_performance": "400",
+      "_cost": "96000"
+    },
+    {
+      "_itemId": "3",
+      "_name": "iPhone",
+      "_level": 7,
+      "_performance": "400",
+      "_cost": "10800"
+    },
+    {
+      "_itemId": "3",
+      "_name": "iPhone",
+      "_level": 8,
+      "_performance": "400",
+      "_cost": "120000"
+    },
+    {
+      "_itemId": "3",
+      "_name": "iPhone",
+      "_level": 9,
+      "_performance": "400",
+      "_cost": "132000"
+    },
+    {
+      "_itemId": "3",
+      "_name": "iPhone",
+      "_level": 10,
+      "_performance": "0",
+      "_cost": "0"
     }
   ],
   "item_4": [
@@ -68,15 +320,78 @@
       "_itemId": "4",
       "_name": "連打ツール",
       "_level": 0,
-      "_performance": "2",
-      "_cost": "10"
+      "_performance": "3000",
+      "_cost": "96000"
     },
     {
       "_itemId": "4",
       "_name": "連打ツール",
       "_level": 1,
-      "_performance": "4",
-      "_cost": "15"
+      "_performance": "900",
+      "_cost": "178000"
+    },
+    {
+      "_itemId": "4",
+      "_name": "連打ツール",
+      "_level": 2,
+      "_performance": "900",
+      "_cost": "260000"
+    },
+    {
+      "_itemId": "4",
+      "_name": "連打ツール",
+      "_level": 3,
+      "_performance": "900",
+      "_cost": "342000"
+    },
+    {
+      "_itemId": "4",
+      "_name": "連打ツール",
+      "_level": 4,
+      "_performance": "900",
+      "_cost": "424000"
+    },
+    {
+      "_itemId": "4",
+      "_name": "連打ツール",
+      "_level": 5,
+      "_performance": "900",
+      "_cost": "506000"
+    },
+    {
+      "_itemId": "4",
+      "_name": "連打ツール",
+      "_level": 6,
+      "_performance": "900",
+      "_cost": "588000"
+    },
+    {
+      "_itemId": "4",
+      "_name": "連打ツール",
+      "_level": 7,
+      "_performance": "900",
+      "_cost": "670000"
+    },
+    {
+      "_itemId": "4",
+      "_name": "連打ツール",
+      "_level": 8,
+      "_performance": "900",
+      "_cost": "752000"
+    },
+    {
+      "_itemId": "4",
+      "_name": "連打ツール",
+      "_level": 9,
+      "_performance": "900",
+      "_cost": "834000"
+    },
+    {
+      "_itemId": "4",
+      "_name": "連打ツール",
+      "_level": 10,
+      "_performance": "0",
+      "_cost": "0"
     }
   ],
   "item_5": [
@@ -84,15 +399,78 @@
       "_itemId": "5",
       "_name": "工場",
       "_level": 0,
-      "_performance": "2",
-      "_cost": "10"
+      "_performance": "8000",
+      "_cost": "3680000"
     },
     {
       "_itemId": "5",
       "_name": "工場",
       "_level": 1,
-      "_performance": "4",
-      "_cost": "15"
+      "_performance": "2100",
+      "_cost": "5740000"
+    },
+    {
+      "_itemId": "5",
+      "_name": "工場",
+      "_level": 2,
+      "_performance": "2100",
+      "_cost": "7800000"
+    },
+    {
+      "_itemId": "5",
+      "_name": "工場",
+      "_level": 3,
+      "_performance": "2100",
+      "_cost": "9860000"
+    },
+    {
+      "_itemId": "5",
+      "_name": "工場",
+      "_level": 4,
+      "_performance": "2100",
+      "_cost": "11920000"
+    },
+    {
+      "_itemId": "5",
+      "_name": "工場",
+      "_level": 5,
+      "_performance": "2100",
+      "_cost": "13980000"
+    },
+    {
+      "_itemId": "5",
+      "_name": "工場",
+      "_level": 6,
+      "_performance": "2100",
+      "_cost": "16040000"
+    },
+    {
+      "_itemId": "5",
+      "_name": "工場",
+      "_level": 7,
+      "_performance": "2100",
+      "_cost": "181000000"
+    },
+    {
+      "_itemId": "5",
+      "_name": "工場",
+      "_level": 8,
+      "_performance": "2100",
+      "_cost": "20160000"
+    },
+    {
+      "_itemId": "5",
+      "_name": "工場",
+      "_level": 9,
+      "_performance": "2100",
+      "_cost": "22220000"
+    },
+    {
+      "_itemId": "5",
+      "_name": "工場",
+      "_level": 10,
+      "_performance": "0",
+      "_cost": "0"
     }
   ],
   "item_6": [
@@ -100,15 +478,78 @@
       "_itemId": "6",
       "_name": "ピラミッド",
       "_level": 0,
-      "_performance": "2",
-      "_cost": "10"
+      "_performance": "15000",
+      "_cost": "23840000"
     },
     {
       "_itemId": "6",
       "_name": "ピラミッド",
       "_level": 1,
-      "_performance": "4",
-      "_cost": "15"
+      "_performance": "3000",
+      "_cost": "42860000"
+    },
+    {
+      "_itemId": "6",
+      "_name": "ピラミッド",
+      "_level": 2,
+      "_performance": "3000",
+      "_cost": "61880000"
+    },
+    {
+      "_itemId": "6",
+      "_name": "ピラミッド",
+      "_level": 3,
+      "_performance": "3000",
+      "_cost": "80900000"
+    },
+    {
+      "_itemId": "6",
+      "_name": "ピラミッド",
+      "_level": 4,
+      "_performance": "3000",
+      "_cost": "99920000"
+    },
+    {
+      "_itemId": "6",
+      "_name": "ピラミッド",
+      "_level": 5,
+      "_performance": "3000",
+      "_cost": "118940000"
+    },
+    {
+      "_itemId": "6",
+      "_name": "ピラミッド",
+      "_level": 6,
+      "_performance": "3000",
+      "_cost": "137960000"
+    },
+    {
+      "_itemId": "6",
+      "_name": "ピラミッド",
+      "_level": 7,
+      "_performance": "3000",
+      "_cost": "156980000"
+    },
+    {
+      "_itemId": "6",
+      "_name": "ピラミッド",
+      "_level": 8,
+      "_performance": "3000",
+      "_cost": "176000000"
+    },
+    {
+      "_itemId": "6",
+      "_name": "ピラミッド",
+      "_level": 9,
+      "_performance": "3000",
+      "_cost": "195020000"
+    },
+    {
+      "_itemId": "6",
+      "_name": "ピラミッド",
+      "_level": 10,
+      "_performance": "0",
+      "_cost": "0"
     }
   ],
   "item_7": [
@@ -116,15 +557,78 @@
       "_itemId": "7",
       "_name": "彗星",
       "_level": 0,
-      "_performance": "2",
-      "_cost": "10"
+      "_performance": "38000",
+      "_cost": "302850000"
     },
     {
       "_itemId": "7",
       "_name": "彗星",
       "_level": 1,
-      "_performance": "4",
-      "_cost": "15"
+      "_performance": "5800",
+      "_cost": "736240000"
+    },
+    {
+      "_itemId": "7",
+      "_name": "彗星",
+      "_level": 2,
+      "_performance": "5800",
+      "_cost": "1169630000"
+    },
+    {
+      "_itemId": "7",
+      "_name": "彗星",
+      "_level": 3,
+      "_performance": "5800",
+      "_cost": "1603020000"
+    },
+    {
+      "_itemId": "7",
+      "_name": "彗星",
+      "_level": 4,
+      "_performance": "5800",
+      "_cost": "2036410000"
+    },
+    {
+      "_itemId": "7",
+      "_name": "彗星",
+      "_level": 5,
+      "_performance": "5800",
+      "_cost": "2469800000"
+    },
+    {
+      "_itemId": "7",
+      "_name": "彗星",
+      "_level": 6,
+      "_performance": "5800",
+      "_cost": "2903190000"
+    },
+    {
+      "_itemId": "7",
+      "_name": "彗星",
+      "_level": 7,
+      "_performance": "5800",
+      "_cost": "3336580000"
+    },
+    {
+      "_itemId": "7",
+      "_name": "彗星",
+      "_level": 8,
+      "_performance": "5800",
+      "_cost": "3769970000"
+    },
+    {
+      "_itemId": "7",
+      "_name": "彗星",
+      "_level": 9,
+      "_performance": "5800",
+      "_cost": "4203360000"
+    },
+    {
+      "_itemId": "7",
+      "_name": "彗星",
+      "_level": 10,
+      "_performance": "0",
+      "_cost": "0"
     }
   ],
   "item_8": [
@@ -132,15 +636,78 @@
       "_itemId": "8",
       "_name": "改造",
       "_level": 0,
-      "_performance": "2",
-      "_cost": "10"
+      "_performance": "128000",
+      "_cost": "8214360000"
     },
     {
       "_itemId": "8",
       "_name": "改造",
       "_level": 1,
-      "_performance": "4",
-      "_cost": "15"
+      "_performance": "12800",
+      "_cost": "14263590000"
+    },
+    {
+      "_itemId": "8",
+      "_name": "改造",
+      "_level": 2,
+      "_performance": "12800",
+      "_cost": "20312820000"
+    },
+    {
+      "_itemId": "8",
+      "_name": "改造",
+      "_level": 3,
+      "_performance": "12800",
+      "_cost": "26362050000"
+    },
+    {
+      "_itemId": "8",
+      "_name": "改造",
+      "_level": 4,
+      "_performance": "12800",
+      "_cost": "32411280000"
+    },
+    {
+      "_itemId": "8",
+      "_name": "改造",
+      "_level": 5,
+      "_performance": "12800",
+      "_cost": "38460510000"
+    },
+    {
+      "_itemId": "8",
+      "_name": "改造",
+      "_level": 6,
+      "_performance": "12800",
+      "_cost": "44509740000"
+    },
+    {
+      "_itemId": "8",
+      "_name": "改造",
+      "_level": 7,
+      "_performance": "12800",
+      "_cost": "50558970000"
+    },
+    {
+      "_itemId": "8",
+      "_name": "改造",
+      "_level": 8,
+      "_performance": "12800",
+      "_cost": "56608200000"
+    },
+    {
+      "_itemId": "8",
+      "_name": "改造",
+      "_level": 9,
+      "_performance": "12800",
+      "_cost": "620657430000"
+    },
+    {
+      "_itemId": "8",
+      "_name": "改造",
+      "_level": 10,
+      "_performance": "0",
+      "_cost": "0"
     }
   ]
 }

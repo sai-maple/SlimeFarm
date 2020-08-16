@@ -34,10 +34,9 @@ namespace SlimeFarm.Scripts.Presentation.View
             _performance.text = $"+{NumberConverter.ConvertToChineseNumber(itemInfo.Performance / 2)}/秒";
             _cost.text = $"{NumberConverter.ConvertToChineseNumber(itemInfo.Cost)}円";
 
-            if (itemInfo.Level == 10)
-            {
-                _button.gameObject.SetActive(false);
-            }
+            if (itemInfo.Level != 10) return;
+            _name.text = $"{itemInfo.Name} Lv10";
+            _button.gameObject.SetActive(false);
         }
     }
 }

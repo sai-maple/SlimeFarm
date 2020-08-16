@@ -9,6 +9,7 @@ namespace SlimeFarm.Scripts.Application.Installer
         public override void InstallBindings()
         {
             Container.DeclareSignal<ScreenSignal>();
+            Container.DeclareSignal<FinishSignal>();
 
             Container.BindSignal<ScreenSignal>()
                 .ToMethod<ScreenPresenter>(p => p.MoveScreen)

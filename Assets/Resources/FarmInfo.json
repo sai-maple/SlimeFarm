@@ -1,81 +1,81 @@
 {
   "data": [
     {
-      "_name": "農場",
+      "_name": "牧場",
       "_level": 1,
       "_levelUpCost": "1000",
       "_shipMoney": "100",
       "_shipSlime": "10"
     },
     {
-      "_name": "農場",
+      "_name": "牧場",
       "_level": 2,
-      "_levelUpCost": "100000",
+      "_levelUpCost": "10000",
       "_shipMoney": "1000",
       "_shipSlime": "100"
     },
     {
-      "_name": "農場",
+      "_name": "牧場",
       "_level": 3,
-      "_levelUpCost": "1000000",
+      "_levelUpCost": "200000",
       "_shipMoney": "10000",
       "_shipSlime": "1000"
     },
     {
-      "_name": "農場",
+      "_name": "牧場",
       "_level": 4,
-      "_levelUpCost": "10000000",
+      "_levelUpCost": "2000000",
       "_shipMoney": "100000",
       "_shipSlime": "10000"
     },
     {
-      "_name": "農場",
+      "_name": "牧場",
       "_level": 5,
-      "_levelUpCost": "100000000",
-      "_shipMoney": "10000000",
-      "_shipSlime": "1000000"
+      "_levelUpCost": "20000000",
+      "_shipMoney": "1000000",
+      "_shipSlime": "100000"
     },
     {
-      "_name": "農場",
+      "_name": "牧場",
       "_level": 6,
-      "_levelUpCost": "100000000",
+      "_levelUpCost": "300000000",
       "_shipMoney": "10000000",
       "_shipSlime": "1000000"
     },
     {
-      "_name": "農場",
+      "_name": "牧場",
       "_level": 7,
-      "_levelUpCost": "1000000000",
+      "_levelUpCost": "300000000",
       "_shipMoney": "100000000",
       "_shipSlime": "10000000"
     },
     {
-      "_name": "農場",
+      "_name": "牧場",
       "_level": 8,
-      "_levelUpCost": "10000000000",
+      "_levelUpCost": "30000000000",
       "_shipMoney": "1000000000",
       "_shipSlime": "100000000"
     },
     {
-      "_name": "農場",
+      "_name": "牧場",
       "_level": 9,
-      "_levelUpCost": "100000000000",
+      "_levelUpCost": "300000000000",
       "_shipMoney": "10000000000",
       "_shipSlime": "1000000000"
     },
     {
-      "_name": "農場",
+      "_name": "牧場",
       "_level": 10,
-      "_levelUpCost": "100000000000",
-      "_shipMoney": "10000000000",
-      "_shipSlime": "1000000000"
+      "_levelUpCost": "4000000000000",
+      "_shipMoney": "100000000000",
+      "_shipSlime": "10000000000"
     },
     {
-      "_name": "農場",
-      "_level": 10,
-      "_levelUpCost": "100000000000",
-      "_shipMoney": "10000000000",
-      "_shipSlime": "1000000000"
+      "_name": "牧場",
+      "_level": 11,
+      "_levelUpCost": "10000000000",
+      "_shipMoney": "1000000000",
+      "_shipSlime": "100000000"
     }
   ]
 }

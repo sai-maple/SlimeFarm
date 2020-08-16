@@ -45,7 +45,11 @@ namespace SlimeFarm.Scripts.Presentation.Presenter
                 {
                     if (!_levelUpFarmUseCase.LevelUp()) return;
                     _signalBus.Fire(new SoundSignal(Sound.Buy));
-                    _shopFarmInOutPort.OnUpdateInfo(_levelUpFarmUseCase.GetFarmInfo());
+                    var farmInfo = _levelUpFarmUseCase.GetFarmInfo();
+                    _shopFarmInOutPort.OnUpdateInfo(farmInfo);
+                    if (farmInfo.Level != 11) return;
+                    _signalBus.Fire(new ScreenSignal(ScreenEnum.Result));
+                    _signalBus.Fire<FinishSignal>();
                 }).AddTo(_disposable);
         }
 

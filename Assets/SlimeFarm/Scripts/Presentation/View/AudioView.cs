@@ -22,16 +22,15 @@ namespace SlimeFarm.Scripts.Presentation.View
 
         async void IAudioInputPort.PlayOneShot(Sound sound)
         {
-            // if (sound == Sound.Spawn && _seAudio.isPlaying) return;
-            // var assetName = sound != Sound.Spawn ? sound.ToString() : $"{sound}_{Random.Range(0, 7)}";
-            //
-            // if (!_clips.ContainsKey(assetName))
-            // {
-            //     var clip = await Addressables.LoadAssetAsync<AudioClip>(assetName);
-            //     _clips.Add(assetName, clip);
-            // }
-            //
-            // _seAudio.PlayOneShot(_clips[assetName]);
+            var assetName = sound != Sound.Spawn ? sound.ToString() : $"sound_{Random.Range(1, 11)}";
+
+            if (!_clips.ContainsKey(assetName))
+            {
+                var clip = await Addressables.LoadAssetAsync<AudioClip>(assetName);
+                _clips.Add(assetName, clip);
+            }
+
+            _seAudio.PlayOneShot(_clips[assetName]);
         }
 
         public void SetBgmVolume(float volume)
