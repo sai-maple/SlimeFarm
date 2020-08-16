@@ -1,31 +1,71 @@
+using System;
 using SlimeFarm.Scripts.Application.Enum;
 using SlimeFarm.Scripts.Application.Signal;
+using SlimeFarm.Scripts.Domains.Entity;
+using UniRx;
+using Zenject;
 
 namespace SlimeFarm.Scripts.Presentation.Presenter
 {
-    public interface IAudioOutputPort
+    public interface IAudioInputPort
     {
         void Play(Bgm bgm);
         void PlayOneShot(Sound sound);
+
+        void SetBgmVolume(float volume);
+        void SetSeVolume(float volume);
     }
 
-    public class AudioPresenter
+    public interface IAudioSignalReceiver
     {
-        private readonly IAudioOutputPort _audioOutputPort = default;
+        void ReceiveBgm(BgmSignal signal);
+        void ReceiveSound(SoundSignal signal);
+    }
 
-        public AudioPresenter(IAudioOutputPort audioOutputPort)
+    public class AudioPresenter : IInitializable, IAudioSignalReceiver, IDisposable
+    {
+        private readonly IAudioInputPort _audioInputPort = default;
+        private readonly IVolume _volume = default;
+
+        private readonly CompositeDisposable _disposable = new CompositeDisposable();
+
+        public AudioPresenter(
+            IAudioInputPort audioInputPort,
+            IVolume volume)
         {
-            _audioOutputPort = audioOutputPort;
+            _audioInputPort = audioInputPort;
+            _volume = volume;
         }
 
-        public void ReceiveBgm(BgmSignal signal)
+        public void Initialize()
         {
-            _audioOutputPort.Play(signal.Bgm);
+            Bind();
         }
 
-        public void ReceiveSound(SoundSignal signal)
+        private void Bind()
         {
-            _audioOutputPort.PlayOneShot(signal.Sound);
+            _volume.OnBgmChangedAsObservable()
+                .Subscribe(_audioInputPort.SetBgmVolume)
+                .AddTo(_disposable);
+
+            _volume.OnSeChangedAsObservable()
+                .Subscribe(_audioInputPort.SetSeVolume)
+                .AddTo(_disposable);
+        }
+
+        void IAudioSignalReceiver.ReceiveBgm(BgmSignal signal)
+        {
+            _audioInputPort.Play(signal.Bgm);
+        }
+
+        void IAudioSignalReceiver.ReceiveSound(SoundSignal signal)
+        {
+            _audioInputPort.PlayOneShot(signal.Sound);
+        }
+
+        public void Dispose()
+        {
+            throw new NotImplementedException();
         }
     }
 }

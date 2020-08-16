@@ -11,13 +11,13 @@ namespace SlimeFarm.Scripts.Application.Installer
             Container.DeclareSignal<SoundSignal>();
             Container.DeclareSignal<BgmSignal>();
 
-            Container.Bind<AudioPresenter>()
+            Container.BindInterfacesTo<AudioPresenter>()
                 .AsSingle().NonLazy();
 
             Container.BindSignal<SoundSignal>()
-                .ToMethod<AudioPresenter>(x => x.ReceiveSound).FromResolve();
+                .ToMethod<IAudioSignalReceiver>(x => x.ReceiveSound).FromResolve();
             Container.BindSignal<BgmSignal>()
-                .ToMethod<AudioPresenter>(x => x.ReceiveBgm).FromResolve();
+                .ToMethod<IAudioSignalReceiver>(x => x.ReceiveBgm).FromResolve();
         }
     }
 }

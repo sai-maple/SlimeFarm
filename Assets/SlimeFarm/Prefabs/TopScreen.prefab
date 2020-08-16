@@ -1451,6 +1451,8 @@ GameObject:
   - component: {fileID: 2552665438037627060}
   - component: {fileID: 2552665438037627061}
   - component: {fileID: 2552665438037627062}
+  - component: {fileID: 7844069757582467815}
+  - component: {fileID: 6934673453518825351}
   m_Layer: 5
   m_Name: FarmButton
   m_TagString: Untagged
@@ -1559,6 +1561,37 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &7844069757582467815
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2552665438037627056}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 30a1bd532837499a8c23bc41cdfe3d72, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _screenEnum: 3
+--- !u!114 &6934673453518825351
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2552665438037627056}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 08eca9f7688a0a24685b89133b020c8e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _scriptableObjectInstallers: []
+  _monoInstallers:
+  - {fileID: 7844069757582467815}
+  _installerPrefabs: []
+  _autoRun: 1
+  _kernel: {fileID: 0}
 --- !u!1 &2552665438130330446
 GameObject:
   m_ObjectHideFlags: 0
@@ -1571,6 +1604,8 @@ GameObject:
   - component: {fileID: 2552665438130330418}
   - component: {fileID: 2552665438130330419}
   - component: {fileID: 2552665438130330444}
+  - component: {fileID: 8654147107886918730}
+  - component: {fileID: 4890404122563402079}
   m_Layer: 5
   m_Name: SettingButton
   m_TagString: Untagged
@@ -1678,3 +1713,34 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &8654147107886918730
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2552665438130330446}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 30a1bd532837499a8c23bc41cdfe3d72, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _screenEnum: 2
+--- !u!114 &4890404122563402079
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2552665438130330446}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 08eca9f7688a0a24685b89133b020c8e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _scriptableObjectInstallers: []
+  _monoInstallers:
+  - {fileID: 8654147107886918730}
+  _installerPrefabs: []
+  _autoRun: 1
+  _kernel: {fileID: 0}

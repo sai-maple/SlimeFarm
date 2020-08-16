@@ -11,6 +11,4 @@ namespace SlimeFarm.Scripts.Application.Signal
             Screen = (int) screenEnum;
         }
     }
-    
-    public class ScreenCloseSignal{}
 }

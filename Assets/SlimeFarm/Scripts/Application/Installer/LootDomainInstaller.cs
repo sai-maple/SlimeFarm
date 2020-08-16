@@ -13,7 +13,7 @@ namespace SlimeFarm.Scripts.Application.Installer
             Container.DeclareSignal<ShipSignal>();
 
             TimeInstaller.Install(Container);
-            
+
             Container.BindInterfacesTo<FarmInfoEntity>()
                 .AsSingle();
             Container.BindInterfacesTo<ItemEntity>()
@@ -24,7 +24,9 @@ namespace SlimeFarm.Scripts.Application.Installer
                 .AsSingle();
             Container.BindInterfacesTo<IndexDespawnIndexEntity>()
                 .AsSingle();
-            
+            Container.BindInterfacesTo<VolumeEntity>()
+                .AsSingle();
+
             Container.BindInterfacesTo<ShipUseCaseUseCase>()
                 .AsSingle();
             Container.BindInterfacesTo<ClickSlimeUseCase>()

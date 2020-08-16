@@ -7,19 +7,20 @@ using UnityEngine.AddressableAssets;
 
 namespace SlimeFarm.Scripts.Presentation.View
 {
-    public class AudioView : MonoBehaviour, IAudioOutputPort
+    public class AudioView : MonoBehaviour, IAudioInputPort
     {
-        [SerializeField] private AudioSource _audio = default;
+        [SerializeField] private AudioSource _bgmAudio = default;
+        [SerializeField] private AudioSource _seAudio = default;
 
         private readonly Dictionary<Sound, AudioClip> _clips = new Dictionary<Sound, AudioClip>();
 
-        async void IAudioOutputPort.Play(Bgm bgm)
+        async void IAudioInputPort.Play(Bgm bgm)
         {
-            _audio.clip = await Addressables.LoadAssetAsync<AudioClip>(bgm.ToString());
-            _audio.Play();
+            _bgmAudio.clip = await Addressables.LoadAssetAsync<AudioClip>(bgm.ToString());
+            _bgmAudio.Play();
         }
 
-        async void IAudioOutputPort.PlayOneShot(Sound sound)
+        async void IAudioInputPort.PlayOneShot(Sound sound)
         {
             // if (!_clips.ContainsKey(sound))
             // {
@@ -27,7 +28,17 @@ namespace SlimeFarm.Scripts.Presentation.View
             //     _clips.Add(sound, clip);
             // }
             //
-            // _audio.PlayOneShot(_clips[sound]);
+            // _seAudio.PlayOneShot(_clips[sound]);
+        }
+
+        public void SetBgmVolume(float volume)
+        {
+            _bgmAudio.volume = volume;
+        }
+
+        public void SetSeVolume(float volume)
+        {
+            _seAudio.volume = volume;
         }
     }
 }

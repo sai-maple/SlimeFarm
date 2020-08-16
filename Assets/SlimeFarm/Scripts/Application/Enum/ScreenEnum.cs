@@ -6,6 +6,7 @@ namespace SlimeFarm.Scripts.Application.Enum
         Top,
         Setting,
         Shop,
-        Result
+        Result,
+        Close
     }
 }

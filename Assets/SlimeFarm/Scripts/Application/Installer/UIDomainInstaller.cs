@@ -9,13 +9,9 @@ namespace SlimeFarm.Scripts.Application.Installer
         public override void InstallBindings()
         {
             Container.DeclareSignal<ScreenSignal>();
-            Container.DeclareSignal<ScreenCloseSignal>();
 
             Container.BindSignal<ScreenSignal>()
                 .ToMethod<ScreenPresenter>(p => p.MoveScreen)
-                .FromResolve();
-            Container.BindSignal<ScreenCloseSignal>()
-                .ToMethod<ScreenPresenter>(p => p.CloseScreen)
                 .FromResolve();
         }
     }

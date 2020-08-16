@@ -19,6 +19,12 @@ namespace SlimeFarm.Scripts.Presentation.View
             Animator.StringToHash("moveOut")
         };
 
+        public void Initialize()
+        {
+            _canvas.alpha = 0;
+            _canvas.blocksRaycasts = false;
+        }
+
         private void Awake()
         {
             _stateMachine = _animator.GetBehaviour<AnimationStateBehaviour>();
