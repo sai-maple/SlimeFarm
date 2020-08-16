@@ -2,13 +2,6 @@
   "data": [
     {
       "_name": "農場",
-      "_level": 0,
-      "_levelUpCost": "1000",
-      "_shipMoney": "100",
-      "_shipSlime": "10"
-    },
-    {
-      "_name": "農場",
       "_level": 1,
       "_levelUpCost": "1000",
       "_shipMoney": "100",

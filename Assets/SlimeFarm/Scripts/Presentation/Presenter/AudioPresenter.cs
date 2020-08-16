@@ -65,7 +65,7 @@ namespace SlimeFarm.Scripts.Presentation.Presenter
 
         public void Dispose()
         {
-            throw new NotImplementedException();
+            _disposable?.Dispose();
         }
     }
 }

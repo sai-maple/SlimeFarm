@@ -12,7 +12,7 @@ namespace SlimeFarm.Scripts.Presentation.View
         [SerializeField] private AudioSource _bgmAudio = default;
         [SerializeField] private AudioSource _seAudio = default;
 
-        private readonly Dictionary<Sound, AudioClip> _clips = new Dictionary<Sound, AudioClip>();
+        private readonly Dictionary<string, AudioClip> _clips = new Dictionary<string, AudioClip>();
 
         async void IAudioInputPort.Play(Bgm bgm)
         {
@@ -22,13 +22,16 @@ namespace SlimeFarm.Scripts.Presentation.View
 
         async void IAudioInputPort.PlayOneShot(Sound sound)
         {
-            // if (!_clips.ContainsKey(sound))
+            // if (sound == Sound.Spawn && _seAudio.isPlaying) return;
+            // var assetName = sound != Sound.Spawn ? sound.ToString() : $"{sound}_{Random.Range(0, 7)}";
+            //
+            // if (!_clips.ContainsKey(assetName))
             // {
-            //     var clip = await Addressables.LoadAssetAsync<AudioClip>(sound.ToString());
-            //     _clips.Add(sound, clip);
+            //     var clip = await Addressables.LoadAssetAsync<AudioClip>(assetName);
+            //     _clips.Add(assetName, clip);
             // }
             //
-            // _seAudio.PlayOneShot(_clips[sound]);
+            // _seAudio.PlayOneShot(_clips[assetName]);
         }
 
         public void SetBgmVolume(float volume)

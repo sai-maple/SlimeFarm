@@ -21,8 +21,7 @@ namespace SlimeFarm.Scripts.Presentation.View
 
         public void Initialize()
         {
-            _canvas.alpha = 0;
-            _canvas.blocksRaycasts = false;
+            gameObject.SetActive(false);
         }
 
         private void Awake()
@@ -50,7 +49,6 @@ namespace SlimeFarm.Scripts.Presentation.View
             _canvas.blocksRaycasts = false;
             _animator.SetTrigger(_properties[3]);
             await _stateMachine.OnAnimationStateChanged();
-
             gameObject.SetActive(false);
         }
 
@@ -61,7 +59,7 @@ namespace SlimeFarm.Scripts.Presentation.View
 
             await _stateMachine.OnAnimationStateChanged();
 
-            Destroy(gameObject);
+            gameObject.SetActive(false);
         }
 
         public void OnDestroy()

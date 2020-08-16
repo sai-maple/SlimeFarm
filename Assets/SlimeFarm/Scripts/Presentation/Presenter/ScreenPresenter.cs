@@ -43,7 +43,7 @@ namespace SlimeFarm.Scripts.Presentation.Presenter
         {
             var screen = _screenStack.Pop();
             await _screenViews[screen].Close();
-            _screenViews[screen].BackIn();
+            _screenViews[_screenStack.Peek()].BackIn();
         }
     }
 }
