@@ -25,7 +25,7 @@ namespace SlimeFarm.Scripts.Domains.Entity
         void Decrement(BigInteger num);
     }
 
-    public class IndexDespawnIndexEntity : ISlimeDespawnIndexer, ISlimeSpawnIndexer, IIndexIncrementAble,
+    public class SpawnIndexEntity : ISlimeDespawnIndexer, ISlimeSpawnIndexer, IIndexIncrementAble,
         IIndexDecrementAble, IDisposable
     {
         private readonly Subject<int> _slimeIndex = default;
@@ -35,7 +35,7 @@ namespace SlimeFarm.Scripts.Domains.Entity
         private const int Limit = 50;
         private int _index = default;
 
-        public IndexDespawnIndexEntity()
+        public SpawnIndexEntity()
         {
             _slimeIndex = new Subject<int>();
             _spawnIndex = new Subject<int>();

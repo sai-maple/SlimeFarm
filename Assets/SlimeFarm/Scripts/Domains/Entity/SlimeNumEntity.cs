@@ -11,7 +11,7 @@ namespace SlimeFarm.Scripts.Domains.Entity
 
     public interface ISlimeDecreasable
     {
-        bool Decrease(BigInteger num);
+        bool TryDecrease(BigInteger num);
     }
 
     public interface ISlimeNum
@@ -41,7 +41,7 @@ namespace SlimeFarm.Scripts.Domains.Entity
             _reactiveSplitNum.Value += num;
         }
 
-        bool ISlimeDecreasable.Decrease(BigInteger num)
+        bool ISlimeDecreasable.TryDecrease(BigInteger num)
         {
             if (_reactiveSplitNum.Value < num) return false;
 

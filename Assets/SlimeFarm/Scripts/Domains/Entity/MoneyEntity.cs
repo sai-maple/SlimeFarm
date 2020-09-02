@@ -17,7 +17,7 @@ namespace SlimeFarm.Scripts.Domains.Entity
 
     public interface IMoneyDecreasable
     {
-        bool Decrease(BigInteger num);
+        bool TryDecrease(BigInteger num);
     }
 
     public class MoneyEntity : IMoney, IMoneyIncreasable, IMoneyDecreasable, IDisposable
@@ -41,7 +41,7 @@ namespace SlimeFarm.Scripts.Domains.Entity
             _money.Value += num;
         }
 
-        bool IMoneyDecreasable.Decrease(BigInteger num)
+        bool IMoneyDecreasable.TryDecrease(BigInteger num)
         {
             if (_money.Value < num) return false;
 

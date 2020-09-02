@@ -31,7 +31,7 @@ namespace SlimeFarm.Scripts.Domains.UseCase
 
         bool IShipUseCase.ShipSlime()
         {
-            if (!_slimeDecreasable.Decrease(_farmInfo.CurrentInfo.ShipSlime)) return false;
+            if (!_slimeDecreasable.TryDecrease(_farmInfo.CurrentInfo.ShipSlime)) return false;
             _moneyIncreasable.Increase(_farmInfo.CurrentInfo.ShipMoney);
             _indexDecrement.Decrement(_slimeNum.Num);
             return true;

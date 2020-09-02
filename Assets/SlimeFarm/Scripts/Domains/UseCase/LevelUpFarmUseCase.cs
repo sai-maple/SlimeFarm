@@ -35,7 +35,7 @@ namespace SlimeFarm.Scripts.Domains.UseCase
 
         bool ILevelUpFarmUseCase.LevelUp()
         {
-            if (!_moneyDecreasable.Decrease(_farmInfo.CurrentInfo.LevelUpCost)) return false;
+            if (!_moneyDecreasable.TryDecrease(_farmInfo.CurrentInfo.LevelUpCost)) return false;
             _farmLevelUpdatable.LevelUp(_farmRepository.GetNextFarmInfo(_farmInfo.CurrentInfo));
             return true;
         }

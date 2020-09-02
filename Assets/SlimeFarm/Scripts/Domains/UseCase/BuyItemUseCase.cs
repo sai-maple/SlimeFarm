@@ -33,7 +33,7 @@ namespace SlimeFarm.Scripts.Domains.UseCase
         bool IBuyItemUseCase.Buy(string itemId)
         {
             var itemInfo = _itemRepository.GetItemInfo(itemId, _item.Num(itemId));
-            if (!_moneyDecreasable.Decrease(itemInfo.Cost)) return false;
+            if (!_moneyDecreasable.TryDecrease(itemInfo.Cost)) return false;
             _item.Add(itemId, itemInfo.Performance);
             return true;
         }

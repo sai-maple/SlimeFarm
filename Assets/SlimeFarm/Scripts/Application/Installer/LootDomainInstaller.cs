@@ -22,7 +22,7 @@ namespace SlimeFarm.Scripts.Application.Installer
                 .AsSingle();
             Container.BindInterfacesTo<SlimeNumEntity>()
                 .AsSingle();
-            Container.BindInterfacesTo<IndexDespawnIndexEntity>()
+            Container.BindInterfacesTo<SpawnIndexEntity>()
                 .AsSingle();
             Container.BindInterfacesTo<VolumeEntity>()
                 .AsSingle();
